@@ -1,69 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta name="author"  content="joshua">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
+    <title>HTML javascript</title>
+     <style>
+     #container{
+      margin: 0 auto;
+      text-align: center;
+     }
+     
+     </style>
 </head>
+
 <body>
+    <div id="container">
+      <!--Example 1 changing styles with javascript -->
+      <h2>Changing Styles and content With Javascript</h2>
 
-  <div id="container">
+    <p id="demo">I will change both content and styles when you click the button below</p>
+
+    <button onclick="myFunction()">click to change content and style </button>
+
+    
+   <script>
+      function myFunction() {
+
+      document.getElementById ("demo").innerHTML="hello welcome to the taste of javascript!!!"
+      document.getElementById("demo").style.fontFamily="arial"
+      document.getElementById("demo").style.color="whitesmoke"
+      document.getElementById("demo").style.backgroundColor="tomato"
+      document.getElementById("demo").style.textAlign="center"
+
+      }
+    </script>
 
 
-     <!--Example 1 changing styles with javascript -->
-
-     <h2>Changing Styles and content With Javascript</h2>
-
-   <p id="demo">I will change but content and styles when you click the button below</p>
-
-   <button onclick="myFunction()">click to change content and style </button>
 
 
-<script>
+    <!-- Example 2 attributes content with javascript -->
 
-    function myFunction() {
+    <h2>Changing Attributes with Javascript</h2>
 
-    document.getElementById ("demo").innerHTML="hello welcome to the taste of javascript!!!"
-    document.getElementById("demo").style.fontFamily="arial"
-    document.getElementById("demo").style.color="whitesmoke"
-    document.getElementById("demo").style.backgroundColor="tomato"
 
+    <script>
+    function pic(change) {
+
+      var Image;
+      if (change == 0) {
+      Image="img/mario-1.jpg"
+      }
+    else (
+    Image="img/mario-2.jpg"
+    )
+
+    document.getElementById("myImage").src=Image
     }
-</script>
 
+    </script>
 
+    <img src="img/mario-1.jpg" alt="mario" width="300px" height="200px" id="myImage">
+    <br> <br>
 
+    
 
-  <!-- Example 2 attributes content with javascript -->
-
-<h2>Changing Attributes with Javascript</h2>
-
-
-<script>
- function pic(change) {
-
-  var Image;
-  if (change == 0) {
-   Image="img/max-harlynking-UdCNVHNgHdI-unsplash.jpg"
-  }
-else (
-Image="img/claudio-luiz-castro-_R95VMWyn7A-unsplash.jpg"
-)
-
-document.getElementById("myImage").src=Image
- }
-
-</script>
-
-<img src="img/max-harlynking-UdCNVHNgHdI-unsplash.jpg" alt="mario" width="300px" height="200px" id="myImage">
-<br> <br>
-
-<button onclick="pic (1)">display image 2</button>
-<button onclick="pic (0)">display image 1</button>
-
-</div>
-
- 
+    <button onclick="pic (0)">display image 1</button>
+    <button onclick="pic (1)">display image 2</button>
+  </div>
 </body>
 </html>
